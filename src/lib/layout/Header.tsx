@@ -1,6 +1,4 @@
-import { Box, Flex } from '@chakra-ui/react';
-
-import ThemeToggle from './ThemeToggle';
+import { Avatar, Box, Flex, Input, Text } from '@chakra-ui/react';
 
 const Header = () => {
   return (
@@ -9,11 +7,22 @@ const Header = () => {
       width="full"
       align="center"
       alignSelf="flex-start"
-      justifyContent="center"
-      gridGap={2}
+      justifyContent="space-between"
+      // gridGap={2}
+      bgColor="blue.900"
+      padding={2}
     >
-      <Box marginLeft="auto">
-        <ThemeToggle />
+      <Box marginLeft={6}>
+        <Text>Ensemble Block</Text>
+      </Box>
+
+      <Box>
+        <Input
+          width={399}
+          size="sm"
+          placeholder="Search for classes, teachers, skills"
+        />
+        <Avatar marginLeft={6} marginRight={6} name="Megan Story" size="sm" />
       </Box>
     </Flex>
   );

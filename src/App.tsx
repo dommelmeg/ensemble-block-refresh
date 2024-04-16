@@ -1,17 +1,20 @@
-import { ChakraProvider } from '@chakra-ui/react';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { Box, ChakraProvider, HStack, Text } from '@chakra-ui/react';
 
-import Layout from '~/lib/layout';
-import Routings from '~/lib/router/Routings';
 import { theme } from '~/lib/styles/theme';
+
+import Header from './lib/layout/Header';
+import SideDrawer from './lib/layout/SideDrawer';
 
 const App = () => (
   <ChakraProvider theme={theme}>
-    <Router>
-      <Layout>
-        <Routings />
-      </Layout>
-    </Router>
+    <Header />
+    <HStack>
+      <SideDrawer />
+      <Box padding={78}>
+        <Text>This is a test...</Text>
+        <Text>This is a test...</Text>
+      </Box>
+    </HStack>
   </ChakraProvider>
 );
 

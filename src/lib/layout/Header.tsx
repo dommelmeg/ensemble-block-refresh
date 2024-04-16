@@ -1,6 +1,15 @@
-import { Avatar, Box, Flex, Input, Text } from '@chakra-ui/react';
+import {
+  Avatar,
+  Box,
+  Button,
+  Flex,
+  HStack,
+  Input,
+  Text,
+} from '@chakra-ui/react';
+import { BiMenu } from 'react-icons/bi';
 
-const Header = () => {
+const Header = ({ setIsOpen }: any) => {
   return (
     <Flex
       as="header"
@@ -12,8 +21,16 @@ const Header = () => {
       bgColor="blue.900"
       padding={2}
     >
-      <Box marginLeft={6}>
-        <Text>Ensemble Block</Text>
+      <Box>
+        <HStack>
+          <Button
+            variant="ghost"
+            onClick={() => setIsOpen((prev: boolean) => !prev)}
+          >
+            <BiMenu />
+          </Button>
+          <Text>Ensemble Block</Text>
+        </HStack>
       </Box>
 
       <Box>

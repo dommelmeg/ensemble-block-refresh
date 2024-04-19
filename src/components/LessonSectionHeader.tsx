@@ -3,9 +3,10 @@ import { BiCopy } from 'react-icons/bi';
 
 const LessonSectionHeader = ({ title }: { title: string }) => {
   const toast = useToast();
+
   const handleAnchorCopy = () => {
     toast({
-      title: `Link to the ${title} Lessons copied to clipboard`,
+      title: `Link to the “${title}” Lessons copied to clipboard`,
       status: 'success',
       duration: 9000,
       isClosable: true,

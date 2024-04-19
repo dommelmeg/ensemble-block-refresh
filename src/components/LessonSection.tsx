@@ -1,7 +1,8 @@
 import { Divider, Flex, Text } from '@chakra-ui/react';
+
 import LessonSectionHeader from './LessonSectionHeader';
 
-const LessonSection = ({ title }: any) => {
+const LessonSection = ({ title }: { title: string }) => {
   return (
     <Flex p={68} direction="column" w={1045}>
       <LessonSectionHeader title={title} />

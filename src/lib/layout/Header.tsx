@@ -9,7 +9,11 @@ import {
 } from '@chakra-ui/react';
 import { BiMenu } from 'react-icons/bi';
 
-const Header = ({ setIsOpen }: any) => {
+const Header = ({
+  setIsOpen,
+}: {
+  setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
+}) => {
   return (
     <Flex
       as="header"

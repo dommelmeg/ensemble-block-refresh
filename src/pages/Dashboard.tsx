@@ -1,4 +1,5 @@
 import { Flex } from '@chakra-ui/react';
+
 import LessonSection from '~/components/LessonSection';
 
 const Dashboard = () => {

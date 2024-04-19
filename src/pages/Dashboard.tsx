@@ -1,8 +1,12 @@
-import { Box } from '@chakra-ui/react';
+import { Flex } from '@chakra-ui/react';
+import LessonSection from '~/components/LessonSection';
 
 const Dashboard = () => {
   return (
-    <Box p={68}>This will be component with header and carousel of videos.</Box>
+    <Flex direction="column">
+      <LessonSection title="Welcome to Ensemble Block" />
+      <LessonSection title="Demos" />
+    </Flex>
   );
 };
 
